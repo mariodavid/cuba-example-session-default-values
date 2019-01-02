@@ -4,7 +4,7 @@
   class="com.rtcab.cesdv.web.default_values.ApplicationDefaultValuesScreen"
   messagesPack="com.rtcab.cesdv.web.screens">
   <layout expand="buttonsPanel" spacing="true">
-    <vbox id="input" width="200px" spacing="true">
+    <vbox id="defaultValues" width="200px" spacing="true">
       <textField width="100%" id="nameField" caption="msg://name"/>
       <dateField width="100%" id="dueDateField" caption="msg://dueDate"/>
       <pickerField width="100%" id="customerField" metaClass="cesdv$Customer" caption="msg://customer"/>
