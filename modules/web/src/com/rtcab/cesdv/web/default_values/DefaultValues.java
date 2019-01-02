@@ -1,4 +1,4 @@
-package com.rtcab.cesdv.web.screens;
+package com.rtcab.cesdv.web.default_values;
 
 public interface DefaultValues {
 

@@ -13,7 +13,7 @@
     <screen id="cesdv$Order.edit"
             template="com/rtcab/cesdv/web/order/order-edit.xml"/>
     <screen id="default-values-screen"
-            template="com/rtcab/cesdv/web/screens/default-values-screen.xml"/>
+            template="/com/rtcab/cesdv/web/default_values/default-values-screen.xml"/>
     <screen id="mainWindow"
             template="com/rtcab/cesdv/web/screens/ext-mainwindow.xml"/>
 </screen-config>

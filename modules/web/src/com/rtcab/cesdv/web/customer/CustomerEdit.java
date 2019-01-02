@@ -1,6 +1,5 @@
 package com.rtcab.cesdv.web.customer;
 
-import com.haulmont.cuba.gui.components.AbstractEditor;
 import com.haulmont.cuba.gui.components.TextField;
 import com.rtcab.cesdv.entity.Customer;
 import com.rtcab.cesdv.web.InitWithDefault;

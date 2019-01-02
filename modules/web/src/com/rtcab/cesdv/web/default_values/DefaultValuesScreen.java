@@ -1,4 +1,4 @@
-package com.rtcab.cesdv.web.screens;
+package com.rtcab.cesdv.web.default_values;
 
 import com.haulmont.cuba.gui.components.AbstractWindow;
 import com.haulmont.cuba.gui.components.DateField;
@@ -6,6 +6,8 @@ import com.haulmont.cuba.gui.components.PickerField;
 import com.haulmont.cuba.gui.components.TextField;
 import com.haulmont.cuba.security.global.UserSession;
 import java.io.Serializable;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import javax.inject.Inject;
 
@@ -23,21 +25,31 @@ public class DefaultValuesScreen extends AbstractWindow {
   @Inject
   protected DateField dueDateField;
 
+  private List<DefaultValueConfiguration> defaultValueConfigurations = new LinkedList<>();
+
   @Override
   public void init(Map<String, Object> params) {
     super.init(params);
 
-
-    nameField.setValue(userSession.getAttribute(DefaultValues.NAME));
-    dueDateField.setValue(userSession.getAttribute(DefaultValues.DUE_DATE));
-    customerField.setValue(userSession.getAttribute(DefaultValues.CUSTOMER));
+    addToDefaultValues(nameField, DefaultValues.NAME);
+    addToDefaultValues(dueDateField, DefaultValues.DUE_DATE);
+    addToDefaultValues(customerField, DefaultValues.CUSTOMER);
 
   }
 
+  private void addToDefaultValues(HasValue field, String sessionName) {
+
+    defaultValueConfigurations.add(new DefaultValueConfiguration(field, sessionName));
+
+    field.setValue(userSession.getAttribute(sessionName));
+  }
+
   public void save() {
-    saveValueToSession(DefaultValues.NAME, nameField.getValue());
-    saveValueToSession(DefaultValues.CUSTOMER, customerField.getValue());
-    saveValueToSession(DefaultValues.DUE_DATE, dueDateField.getValue());
+
+    for (DefaultValueConfiguration defaultValueConfiguration : defaultValueConfigurations) {
+      saveValueToSession(defaultValueConfiguration.getSessionAttributeName(),
+          defaultValueConfiguration.getField().getValue());
+    }
 
     close(COMMIT_ACTION_ID, true);
   }
@@ -45,8 +57,7 @@ public class DefaultValuesScreen extends AbstractWindow {
   private void saveValueToSession(String attributeName, Serializable attributeValue) {
     if (attributeValue != null) {
       userSession.setAttribute(attributeName, attributeValue);
-    }
-    else {
+    } else {
       userSession.removeAttribute(attributeName);
     }
   }

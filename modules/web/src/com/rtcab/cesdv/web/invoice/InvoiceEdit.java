@@ -1,6 +1,5 @@
 package com.rtcab.cesdv.web.invoice;
 
-import com.haulmont.cuba.gui.components.AbstractEditor;
 import com.haulmont.cuba.gui.components.DateField;
 import com.haulmont.cuba.gui.components.PickerField;
 import com.rtcab.cesdv.entity.Invoice;
