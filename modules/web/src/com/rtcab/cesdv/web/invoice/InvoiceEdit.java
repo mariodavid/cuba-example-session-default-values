@@ -3,8 +3,8 @@ package com.rtcab.cesdv.web.invoice;
 import com.haulmont.cuba.gui.components.DateField;
 import com.haulmont.cuba.gui.components.PickerField;
 import com.rtcab.cesdv.entity.Invoice;
-import com.rtcab.cesdv.web.InitWithDefault;
-import com.rtcab.cesdv.web.screens.DefaultValues;
+import com.rtcab.cesdv.web.default_values.InitWithDefault;
+import com.rtcab.cesdv.web.default_values.DefaultValues;
 import de.balvi.cuba.declarativecontrollers.web.editor.AnnotatableAbstractEditor;
 import javax.inject.Named;
 

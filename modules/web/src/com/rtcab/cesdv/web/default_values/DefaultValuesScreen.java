@@ -16,28 +16,10 @@ public class DefaultValuesScreen extends AbstractWindow {
   @Inject
   protected UserSession userSession;
 
-  @Inject
-  protected PickerField customerField;
-
-  @Inject
-  protected TextField nameField;
-
-  @Inject
-  protected DateField dueDateField;
-
   private List<DefaultValueConfiguration> defaultValueConfigurations = new LinkedList<>();
 
-  @Override
-  public void init(Map<String, Object> params) {
-    super.init(params);
 
-    addToDefaultValues(nameField, DefaultValues.NAME);
-    addToDefaultValues(dueDateField, DefaultValues.DUE_DATE);
-    addToDefaultValues(customerField, DefaultValues.CUSTOMER);
-
-  }
-
-  private void addToDefaultValues(HasValue field, String sessionName) {
+  protected void addToDefaultValues(HasValue field, String sessionName) {
 
     defaultValueConfigurations.add(new DefaultValueConfiguration(field, sessionName));
 

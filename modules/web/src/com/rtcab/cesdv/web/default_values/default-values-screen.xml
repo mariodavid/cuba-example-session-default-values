@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
   caption="msg://caption"
-  class="com.rtcab.cesdv.web.screens.DefaultValuesScreen"
+  class="com.rtcab.cesdv.web.default_values.ApplicationDefaultValuesScreen"
   messagesPack="com.rtcab.cesdv.web.screens">
   <layout expand="buttonsPanel" spacing="true">
     <vbox id="input" width="200px" spacing="true">

@@ -1,4 +1,4 @@
-package com.rtcab.cesdv.web;
+package com.rtcab.cesdv.web.default_values;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

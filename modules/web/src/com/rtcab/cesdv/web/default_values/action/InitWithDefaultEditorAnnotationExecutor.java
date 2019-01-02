@@ -1,10 +1,10 @@
-package com.rtcab.cesdv.web.action;
+package com.rtcab.cesdv.web.default_values.action;
 
 import com.haulmont.cuba.core.global.PersistenceHelper;
 import com.haulmont.cuba.core.global.UserSessionSource;
 import com.haulmont.cuba.gui.components.Component.HasValue;
 import com.haulmont.cuba.gui.components.Window.Editor;
-import com.rtcab.cesdv.web.InitWithDefault;
+import com.rtcab.cesdv.web.default_values.InitWithDefault;
 import de.balvi.cuba.declarativecontrollers.web.annotationexecutor.editor.EditorFieldAnnotationExecutor;
 import java.lang.annotation.Annotation;
 import java.util.Map;
