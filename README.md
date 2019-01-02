@@ -38,7 +38,7 @@ In order to use it the following steps have to be taken:
 ```
 
 
-3. In the destination screen (e.g. `OrderEdit`) the fields that should be populated with a default value need the annotation:
+4. In the destination screen (e.g. `OrderEdit`) the fields that should be populated with a default value need the annotation:
 
 ```
   @InitWithDefault(DefaultValues.ASSIGNED_TO)
