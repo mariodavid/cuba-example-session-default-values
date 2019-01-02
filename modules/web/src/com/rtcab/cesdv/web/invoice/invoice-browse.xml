@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.rtcab.cesdv.web.invoice.InvoiceBrowse"
+        focusComponent="invoicesTable"
+        lookupComponent="invoicesTable"
+        messagesPack="com.rtcab.cesdv.web.invoice">
+    <dsContext>
+        <groupDatasource id="invoicesDs"
+                         class="com.rtcab.cesdv.entity.Invoice"
+                         view="invoice-view">
+            <query>
+                <![CDATA[select e from cesdv$Invoice e]]>
+            </query>
+        </groupDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="invoicesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="invoicesTable"
+                datasource="invoicesDs">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="invoicesTable"
+                    width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+            </actions>
+            <columns>
+                <column id="customer"/>
+                <column id="dueDate"/>
+            </columns>
+            <rows datasource="invoicesDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="invoicesTable.create"/>
+                <button id="editBtn"
+                        action="invoicesTable.edit"/>
+                <button id="removeBtn"
+                        action="invoicesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</window>

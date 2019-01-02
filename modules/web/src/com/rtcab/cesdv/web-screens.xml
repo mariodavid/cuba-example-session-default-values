@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<screen-config xmlns="http://schemas.haulmont.com/cuba/screens.xsd">
+    <screen id="cesdv$Customer.browse"
+            template="com/rtcab/cesdv/web/customer/customer-browse.xml"/>
+    <screen id="cesdv$Customer.edit"
+            template="com/rtcab/cesdv/web/customer/customer-edit.xml"/>
+    <screen id="cesdv$Invoice.browse"
+            template="com/rtcab/cesdv/web/invoice/invoice-browse.xml"/>
+    <screen id="cesdv$Invoice.edit"
+            template="com/rtcab/cesdv/web/invoice/invoice-edit.xml"/>
+    <screen id="cesdv$Order.browse"
+            template="com/rtcab/cesdv/web/order/order-browse.xml"/>
+    <screen id="cesdv$Order.edit"
+            template="com/rtcab/cesdv/web/order/order-edit.xml"/>
+    <screen id="default-values-screen"
+            template="com/rtcab/cesdv/web/screens/default-values-screen.xml"/>
+    <screen id="mainWindow"
+            template="com/rtcab/cesdv/web/screens/ext-mainwindow.xml"/>
+</screen-config>

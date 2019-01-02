@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://editorCaption"
+        class="com.rtcab.cesdv.web.invoice.InvoiceEdit"
+        datasource="invoiceDs"
+        focusComponent="fieldGroup"
+        messagesPack="com.rtcab.cesdv.web.invoice">
+    <dsContext>
+        <datasource id="invoiceDs"
+                    class="com.rtcab.cesdv.entity.Invoice"
+                    view="invoice-view"/>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="windowActions"
+            spacing="true">
+        <fieldGroup id="fieldGroup"
+                    datasource="invoiceDs">
+            <column width="250px">
+                <field property="customer"/>
+                <field property="dueDate"/>
+            </column>
+        </fieldGroup>
+        <frame id="windowActions"
+               screen="editWindowActions"/>
+    </layout>
+</window>
